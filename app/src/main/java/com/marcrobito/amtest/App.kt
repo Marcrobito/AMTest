@@ -12,7 +12,7 @@ class App:Application() {
 
     companion object {
         lateinit var instance: Application
-        lateinit var resourses: Resources
+        lateinit var res: Resources
     }
 
 
@@ -22,7 +22,7 @@ class App:Application() {
     override fun onCreate() {
         super.onCreate()
         instance = this
-        resourses = resources
+        res = resources
         startKoin {
             androidContext(this@App)
             modules(appModules)

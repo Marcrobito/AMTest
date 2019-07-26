@@ -54,6 +54,16 @@ dependencies {
     implementation 'org.koin:koin-android:2.0.1'
     implementation "org.koin:koin-androidx-scope:2.0.1"
 
+    //Dependency Injection for Java
+    //Dagger2 for dependency injection
+    implementation 'com.google.dagger:dagger:2.16'
+    kapt 'com.google.dagger:dagger-compiler:2.16'
+
+    //RX
+    implementation "com.squareup.retrofit2:adapter-rxjava2:2.4.0"
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.6'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+
     //OkHttp HTTP client
     implementation "com.squareup.okhttp3:okhttp:4.0.1"
     implementation "com.squareup.okhttp3:logging-interceptor:4.0.1"
@@ -66,8 +76,10 @@ dependencies {
     //Gson to convert Java Objects to JSON and backwards
     implementation 'com.google.code.gson:gson:2.8.5'
 
+    //BK
     implementation 'com.jakewharton:butterknife:10.1.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
+    kapt "com.jakewharton:butterknife-compiler:10.1.0"
 
 
     testImplementation 'junit:junit:4.12'

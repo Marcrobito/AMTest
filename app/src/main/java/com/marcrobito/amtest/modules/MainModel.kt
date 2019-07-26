@@ -1,6 +1,5 @@
 package com.marcrobito.amtest.modules
 
-import android.content.res.Resources
 import android.util.Log
 import com.marcrobito.amtest.App
 import com.marcrobito.amtest.R
@@ -9,7 +8,6 @@ import com.marcrobito.amtest.pojos.MovieData
 import com.marcrobito.amtest.pojos.Result
 import com.marcrobito.amtest.utils.Build
 import kotlinx.coroutines.*
-import kotlinx.coroutines.Dispatchers.Main
 import org.koin.core.KoinComponent
 import org.koin.core.inject
 import retrofit2.Response
@@ -49,7 +47,7 @@ class MainModel:MainContract.Model, KoinComponent{
 
     }
 
-    private suspend fun callTopMoviesAsync(pageNumber: Int): Response<Result> = api.getTopRated(App.resourses.getString(R.string.api_locale), Build().API_KEY, pageNumber).execute()
+    private suspend fun callTopMoviesAsync(pageNumber: Int): Response<Result> = api.getTopRated(App.res.getString(R.string.api_locale), Build().API_KEY, pageNumber).execute()
 
 
 }

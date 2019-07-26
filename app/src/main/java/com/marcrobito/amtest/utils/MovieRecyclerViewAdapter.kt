@@ -26,7 +26,7 @@ class MovieRecyclerViewAdapter(private val items:List<MovieData>, private val li
         listener.onItemClick(position)
     }
 
-    class ViewHolder(parent: ViewGroup, val listener: OnItemClickListener) :
+    class ViewHolder(parent: ViewGroup, private val listener: OnItemClickListener) :
          RecyclerView.ViewHolder(LayoutInflater.from(parent.context)
              .inflate(com.marcrobito.amtest.R.layout.movie_view_holder, parent, false)), View.OnClickListener {
 
